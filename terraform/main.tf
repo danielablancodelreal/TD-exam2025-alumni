@@ -1,6 +1,6 @@
 resource "google_container_cluster" "primary" {
   name     = var.gcp-cluster-name
-  location = var.gcp-zone
+  location = var.gcp-region
 
   remove_default_node_pool = true
   initial_node_count       = 1
@@ -27,7 +27,7 @@ resource "google_container_node_pool" "primary_nodes" {
 
 resource "google_storage_bucket" "td_bucket" {
   name     = var.gcp-bucket-name
-  location = var.gcp-zone
+  location = var.gcp-region
   force_destroy = true
 
   uniform_bucket_level_access = true
