@@ -1,4 +1,4 @@
-
+g
 variable "gcp-project" {
   description = "GCP project"
   default     = "lab5-458007"
@@ -27,7 +27,7 @@ variable "gcp-cluster-name" {
 
 variable "gcp-node-count" {
   description = "K8s Worker nodes"
-  type        = int
+  type        = integer
   default     = 2
 }
 variable "gcp-node-size" {
