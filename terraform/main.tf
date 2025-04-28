@@ -1,6 +1,6 @@
 resource "google_container_cluster" "primary" {
-  name     = ${var.gcp-cluster-name}
-  location = ${var.gcp-zone}
+  name     = "${var.gcp-cluster-name}"
+  location = "${var.gcp-zone}"
 
   remove_default_node_pool = true
   initial_node_count       = 1
@@ -13,8 +13,8 @@ resource "google_container_cluster" "primary" {
 resource "google_container_node_pool" "primary_nodes" {
   name       = "${var.gcp-cluster-name}-node-pool"
   cluster    = google_container_cluster.primary.name
-  location   = ${var.gcp-zone}
-  node_count = ${var.gcp-node-count}
+  location   = "${var.gcp-zone}"
+  node_count = "${var.gcp-node-count}"
 
   node_config {
     machine_type = "e2.small"
@@ -26,8 +26,8 @@ resource "google_container_node_pool" "primary_nodes" {
 }
 
 resource "google_storage_bucket" "td_bucket" {
-  name     = ${var.gcp-bucket-name}
-  location = ${var.gcp-zone}
+  name     = "${var.gcp-bucket-name}"
+  location = "${var.gcp-zone}"
   force_destroy = true
 
   uniform_bucket_level_access = true
