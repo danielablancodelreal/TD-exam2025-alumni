@@ -1,4 +1,3 @@
-g
 variable "gcp-project" {
   description = "GCP project"
   default     = "lab5-458007"
