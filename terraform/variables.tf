@@ -36,5 +36,5 @@ variable "gcp-node-size" {
 variable "gcp-bucket-name" {
   description = "Bucket Name"
   type        = string
-  default     = "daniela-bucket"
+  default     = "danielablancodelreal-bucket"
 }
