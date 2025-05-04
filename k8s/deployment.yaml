@@ -17,7 +17,7 @@ spec:
         image: gcr.io/icai2025/exam2025:latest
         imagePullPolicy: 
         ports:
-        - containerPort: 5001
+        - containerPort: 5000
         env:
           - name: GCP_BUCKET_NAME
             value: "REPLACE_BUCKET_NAME"
@@ -25,6 +25,6 @@ spec:
           periodSeconds: 
           httpGet:
             path: /probe
-            port: 5001
+            port: 5000
 
 
